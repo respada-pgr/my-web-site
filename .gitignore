@@ -1,0 +1,36 @@
+# Carpetas de copia o respaldo
+old/
+bak/
+backup/
+**/old/
+**/bak/
+**/backup/
+
+# Archivos de copia o temporales
+*.old
+*.bak
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Archivos del sistema
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.vcxproj.user
+
+# Visual Studio Code
+.vscode/
+
+# Node.js (por si lo usas en el futuro)
+node_modules/
+
+# Carpetas de build
+dist/
+build/

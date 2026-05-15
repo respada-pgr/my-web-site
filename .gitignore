@@ -36,7 +36,7 @@ dist/
 build/
 
 # Ignore internal repositories within projects/
-wwwroot/projects/**/.git/
-wwwroot/projects/**/.gitignore
-wwwroot/projects/**/.gitattributes
-wwwroot/projects/**/.gitmodules
+projects/**/.git/
+projects/**/.gitignore
+projects/**/.gitattributes
+projects/**/.gitmodules

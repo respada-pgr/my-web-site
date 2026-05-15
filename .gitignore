@@ -1,4 +1,4 @@
-# Carpetas de copia o respaldo
+# Ignore backup or copy folders
 old/
 bak/
 backup/
@@ -6,7 +6,7 @@ backup/
 **/bak/
 **/backup/
 
-# Archivos de copia o temporales
+# Ignore backup or temporary files
 *.old
 *.bak
 *.tmp
@@ -14,7 +14,7 @@ backup/
 *.log
 *.cache
 
-# Archivos del sistema
+# Ignore system files
 Thumbs.db
 Desktop.ini
 .DS_Store
@@ -28,9 +28,15 @@ Desktop.ini
 # Visual Studio Code
 .vscode/
 
-# Node.js (por si lo usas en el futuro)
+# Node.js
 node_modules/
 
-# Carpetas de build
+# Ignore build folders
 dist/
 build/
+
+# Ignore internal repositories within projects/
+wwwroot/projects/**/.git/
+wwwroot/projects/**/.gitignore
+wwwroot/projects/**/.gitattributes
+wwwroot/projects/**/.gitmodules

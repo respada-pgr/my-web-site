@@ -1,0 +1,304 @@
+:root {
+    --bg-color: #0b0f1a;
+    --card-bg: #161b2b;
+    --footer-bg: #080b14;
+    --accent-color: #00d4ff;
+    --text-main: #e2e8f0;
+    --text-dim: #94a3b8;
+    --nav-bg: rgba(11, 15, 26, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    /* System Font Stack: Apple primero, luego Windows, luego Linux */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased; /* Mejora el renderizado en Mac/iOS */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navegación */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 1rem 10%;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 0px 6px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    letter-spacing: -1px;
+}
+
+.logo div {
+    margin-top: -0.4rem;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+    nav a:hover {
+        color: var(--accent-color);
+    }
+/* Lang Switcher */
+.lang-switcher {
+    display: flex;
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lang-btn {
+    padding: 4px 10px;
+    background: transparent;
+    color: var(--text-dim);
+    border: none;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+    .lang-btn.active {
+        background: var(--accent-color);
+        color: var(--bg-color);
+    }
+
+section {
+    padding: 4.5rem 10% 2rem;
+}
+/* Hero Section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    padding-top: 7rem;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #1e293b 0%, #0b0f1a 100%);
+}
+
+    #hero h1 {
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        font-weight: 800;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+    }
+
+        #hero h1 span {
+            background: linear-gradient(90deg, #00d4ff, #0055ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+    #hero p {
+        max-width: 600px;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        color: var(--text-dim);
+    }
+/* Proyectos */
+#proyectos {
+    padding-bottom: 3rem;
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-color);
+    }
+
+.tag {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    padding: 4px 10px;
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--accent-color);
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+/* Footer */
+footer {
+    padding: 2rem 10% 2rem;
+    background: var(--footer-bg);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.powered-by {
+    margin: 15px 0 20px 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    opacity: 0.7;
+}
+
+    .powered-by span {
+        color: var(--accent-color);
+        font-family: 'Courier New', monospace;
+        font-weight: 700;
+    }
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.btn-contact {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+    .btn-contact:hover {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+    }
+
+.privacy-toast {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    padding: 15px 25px;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+    .privacy-toast.hidden {
+        bottom: -150px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .privacy-toast div.privacy-toast-content {
+        display: flex;
+        flex-direction: column; /* Coloca texto arriba y botón debajo */
+        align-items: center; /* Centra horizontalmente */
+        text-align: center; /* Centra el texto */
+        gap: 5px; /* Espacio entre texto y botón */
+    }
+
+    .privacy-toast div.privacy-toast-text p {
+        margin: 0;
+        color: var(--text-main);
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    .privacy-toast div.privacy-toast-button button {
+        margin: 5px;
+        padding: 6px 18px;
+        background: var(--accent-color);
+        color: black; /*var(--bg-color);*/
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        font-weight: 800;
+        cursor: pointer;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        transition: transform 0.2s;
+    }
+
+        .privacy-toast div.privacy-toast-button button:hover {
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            transform: scale(1.05);
+        }
+/* Ajuste para móviles muy pequeños */
+@media (max-width: 600px) {
+    .privacy-toast div.privacy-toast-content {
+        flex-direction: column;
+        gap: 5px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .privacy-toast div.privacy-toast-text p {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    #hero h1 {
+        font-size: 2.8rem;
+    }
+}

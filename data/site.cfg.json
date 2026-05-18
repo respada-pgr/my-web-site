@@ -1,0 +1,27 @@
+{
+  "defaultLang": "en",
+  "uiTexts": {
+    "es": {
+      "navInicio": "Inicio",
+      "navProyectos": "Proyectos",
+      "heroTitle": "🌐</br>Respada</br><span>Portfolio</span>",
+      "heroDesc": "Trabajos, experimentos y proyectos personales.",
+      "proyectosTitle": "Proyectos",
+      "viewProject": "Ver Proyecto",
+      "footerPowered": "Página creada sin bibliotecas javascript externas. <span><strong>Solo</strong> Vanilla JavaScript</span>",
+      "privacyMsg": "🛡️ <strong>Privacy-First:</strong> Este sitio no utiliza cookies ni rastreadores.",
+      "privacyBtn": "Entendido"
+    },
+    "en": {
+      "navInicio": "Home",
+      "navProyectos": "Projects",
+      "heroTitle": "🌐</br>Respada</br><span>Portfolio</span>",
+      "heroDesc": "Personal works, experiments, and projects.",
+      "proyectosTitle": "Projects",
+      "viewProject": "View Project",
+      "footerPowered": "Page created without external JavaScript libraries. <span><strong>Only</strong> Vanilla JavaScript</span>",
+      "privacyMsg": "🛡️ <strong>Privacy-First:</strong> This site does not use cookies or trackers.",
+      "privacyBtn": "Understood"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba de Repository con Libros</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .libro { padding: 8px; border-bottom: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+<h1>Prueba de Repository + Libros</h1>
+<div id="output"></div>
+
+<script src="../projects/LibraryWeb/LibraryWeb/js/models/base.js"></script>
+
+<script>
+
+
+// Libro hereda de RepositoryItem
+class Libro extends RepositoryItem {
+    constructor({ id, titulo, autor, año }) {
+        super(id);
+        this.titulo = titulo;
+        this.autor = autor;
+        this.año = año;
+    }
+}
+
+// Libros hereda de Repository
+class Libros extends Repository {
+    constructor() {
+        super();
+    }
+
+    buscarPorAutor(autor) {
+        return this.items.filter(l => l.autor.toLowerCase().includes(autor.toLowerCase()));
+    }
+
+    buscarPorTitulo(texto) {
+        return this.items.filter(l => l.titulo.toLowerCase().includes(texto.toLowerCase()));
+    }
+}
+
+// ===============================
+//  PRUEBA
+// ===============================
+
+const repo = new Libros();
+
+repo.add(new Libro({ titulo: "El Quijote", autor: "Cervantes", año: 1605 }));
+repo.add(new Libro({ titulo: "Cien años de soledad", autor: "García Márquez", año: 1967 }));
+repo.add(new Libro({ titulo: "La sombra del viento", autor: "Carlos Ruiz Zafón", año: 2001 }));
+
+const output = document.getElementById("output");
+
+repo.getAll().forEach(libro => {
+    const div = document.createElement("div");
+    div.className = "libro";
+    div.textContent = `${libro.titulo} — ${libro.autor} (${libro.año})`;
+    output.appendChild(div);
+});
+</script>
+
+</body>
+</html>

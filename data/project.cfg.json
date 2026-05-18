@@ -1,0 +1,30 @@
+{
+  "projects": [
+    {
+      "name": "cdateTime",
+      "es": {
+        "titulo": "Librer�a CDateTime",
+        "desc": "Gesti�n de tiempo avanzada estilo C#."
+      },
+      "en": {
+        "titulo": "CDateTime Library",
+        "desc": "Advanced time management C# style."
+      },
+      "tags": [ "JS", "Regex" ],
+      "link": "#"
+    },
+    {
+      "name": "library-web",
+      "es": {
+        "titulo": "Bibiblioteca HTML",
+        "desc": ""
+      },
+      "en": {
+        "titulo": "HTML Library",
+        "desc": "Real-time expense visualizer."
+      },
+      "tags": [ "InDevelopment", "VanillaJS" ],
+      "link": "projects/LibraryWeb/LibraryWeb/index.html"
+    }
+  ]
+}
